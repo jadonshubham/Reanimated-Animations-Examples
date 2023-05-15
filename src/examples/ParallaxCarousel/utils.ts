@@ -7,7 +7,7 @@ export const getInputRangeForInterpolate = (
   const inputRange = [];
   for (
     let i = 0;
-    i <= carousalElementWidth * count;
+    i <= carousalElementWidth * count + 1; // +1 added to fix issue on android because of floats
     i += carousalElementWidth / 2
   ) {
     inputRange.push(i);
@@ -29,7 +29,7 @@ export const getOutputTranslateRangeForInterpolate = (
 
   for (
     let i = 0;
-    i <= carousalElementWidth * count;
+    i <= carousalElementWidth * count + 1;
     i += carousalElementWidth
   ) {
     if (i === carousalElementWidth * count) {
@@ -56,7 +56,7 @@ export const getOutputWidthRangeForInterpolate = (
   const outputRange = [];
   for (
     let i = 0;
-    i <= carousalElementWidth * count;
+    i <= carousalElementWidth * count + 1;
     i += carousalElementWidth
   ) {
     if (i === carousalElementWidth * count) {

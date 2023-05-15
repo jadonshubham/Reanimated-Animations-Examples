@@ -16,26 +16,25 @@ import {
 } from './utils';
 
 const {width} = Dimensions.get('screen');
+const dotsPairs = images.length - 1;
+const inputRange = getInputRangeForInterpolate(dotsPairs, width);
+const outputRangeForTranslate = getOutputTranslateRangeForInterpolate(
+  dotsPairs,
+  width,
+  DOT_SIZE + DOT_MARGIN_RIGHT,
+);
+const outputRangeForWidth = getOutputWidthRangeForInterpolate(
+  dotsPairs,
+  width,
+  DOT_SIZE,
+  2 * DOT_SIZE + DOT_MARGIN_RIGHT,
+);
 
 interface StretchingBoxProps {
   translateX: SharedValue<number>;
 }
 export const StretchingBox = ({translateX}: StretchingBoxProps) => {
   const animatedStyle = useAnimatedStyle(() => {
-    const dotsPairs = images.length - 1;
-    const inputRange = getInputRangeForInterpolate(dotsPairs, width);
-    const outputRangeForTranslate = getOutputTranslateRangeForInterpolate(
-      dotsPairs,
-      width,
-      DOT_SIZE + DOT_MARGIN_RIGHT,
-    );
-    const outputRangeForWidth = getOutputWidthRangeForInterpolate(
-      dotsPairs,
-      width,
-      DOT_SIZE,
-      2 * DOT_SIZE + DOT_MARGIN_RIGHT,
-    );
-
     const translate = interpolate(
       translateX.value,
       inputRange,

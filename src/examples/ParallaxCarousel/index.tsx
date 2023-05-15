@@ -40,7 +40,7 @@ const ParallaxCarousel = () => {
   });
 
   return (
-    <SafeAreaView style={{flex: 1}}>
+    <SafeAreaView style={{flex: 1, backgroundColor: 'white'}}>
       <Animated.FlatList
         data={data}
         keyExtractor={item => item.key}
@@ -63,6 +63,7 @@ const ParallaxCarousel = () => {
       <FadingDot translateX={translateX} />
       <View style={{marginTop: 10}} />
       <MovingFrame translateX={translateX} />
+      <View style={{marginTop: 10}} />
     </SafeAreaView>
   );
 };

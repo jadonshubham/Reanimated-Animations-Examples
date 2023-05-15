@@ -18,33 +18,31 @@ import {PageDot} from './FadingDot';
 
 const {width} = Dimensions.get('screen');
 const LINE_HEIGHT = 3;
+const dotsPairs = images.length - 1;
+const inputRange = getInputRangeForInterpolate(dotsPairs, width);
+const outputRangeForTranslate = getOutputTranslateRangeForInterpolate(
+  dotsPairs,
+  width,
+  DOT_SIZE + DOT_MARGIN_RIGHT,
+);
+const outputRangeForWidth = getOutputWidthRangeForInterpolate(
+  dotsPairs,
+  width,
+  0,
+  DOT_SIZE + DOT_MARGIN_RIGHT,
+);
 
 interface MovingLineProps {
   translateX: SharedValue<number>;
 }
 export const MovingLine = ({translateX}: MovingLineProps) => {
   const animatedStyle = useAnimatedStyle(() => {
-    const dotsPairs = images.length - 1;
-    const inputRange = getInputRangeForInterpolate(dotsPairs, width);
-    const outputRangeForTranslate = getOutputTranslateRangeForInterpolate(
-      dotsPairs,
-      width,
-      DOT_SIZE + DOT_MARGIN_RIGHT,
-    );
-    const outputRangeForWidth = getOutputWidthRangeForInterpolate(
-      dotsPairs,
-      width,
-      0,
-      DOT_SIZE + DOT_MARGIN_RIGHT,
-    );
-
     const translate = interpolate(
       translateX.value,
       inputRange,
       outputRangeForTranslate,
       Extrapolate.CLAMP,
     );
-
     const boxWidth = interpolate(
       translateX.value,
       inputRange,

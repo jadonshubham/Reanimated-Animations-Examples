@@ -18,26 +18,25 @@ import {
 } from './utils';
 
 const {width} = Dimensions.get('screen');
+const dotsPairs = images.length - 1;
+const inputRange = getInputRangeForInterpolate(dotsPairs, width);
+const outputRangeForTranslate = getOutputTranslateRangeForInterpolate(
+  dotsPairs,
+  width,
+  DOT_SIZE + DOT_MARGIN_RIGHT,
+);
+const outputRangeForWidth = getOutputWidthRangeForInterpolate(
+  dotsPairs,
+  width,
+  FRAME_SIZE,
+  2 * DOT_SIZE + DOT_MARGIN_RIGHT + FRAME_SIZE_DIFFERENCE,
+);
 
 interface MovingFrameStretchProps {
   translateX: SharedValue<number>;
 }
 export const MovingFrameStretch = ({translateX}: MovingFrameStretchProps) => {
   const animatedStyle = useAnimatedStyle(() => {
-    const dotsPairs = images.length - 1;
-    const inputRange = getInputRangeForInterpolate(dotsPairs, width);
-    const outputRangeForTranslate = getOutputTranslateRangeForInterpolate(
-      dotsPairs,
-      width,
-      DOT_SIZE + DOT_MARGIN_RIGHT,
-    );
-    const outputRangeForWidth = getOutputWidthRangeForInterpolate(
-      dotsPairs,
-      width,
-      FRAME_SIZE,
-      2 * DOT_SIZE + DOT_MARGIN_RIGHT + FRAME_SIZE_DIFFERENCE,
-    );
-
     const translate = interpolate(
       translateX.value,
       inputRange,
