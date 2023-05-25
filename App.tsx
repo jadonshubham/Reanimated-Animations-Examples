@@ -1,8 +1,8 @@
 import React from 'react';
-import ParallaxCarousel from './src/examples/ParallaxCarousel';
+import Animated3DCarousel from './src/examples/Animated3DCarousel';
 
 function App(): JSX.Element {
-  return <ParallaxCarousel />;
+  return <Animated3DCarousel />;
 }
 
 export default App;
