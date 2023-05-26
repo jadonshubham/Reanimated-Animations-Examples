@@ -21,3 +21,9 @@ Inspiration from [Link](https://www.animatereactnative.com/post/react-native-par
 Inspiration from [Link](https://www.animatereactnative.com/post/react-native-parallax-carousel-%2B-worm-pagination)
 
 ![Animated3Dcarousel](https://github.com/jadonshubham/Reanimated-Animations-Examples/assets/93374747/eed5839c-301e-4ae1-9b17-2ea31bbac6c6)
+
+
+### 3. CreditCard Scroll Animation
+Inspiration from [Link](https://www.animatereactnative.com/post/credit-card-scroll-animation)
+
+![creditCardScrollAnimation](https://github.com/jadonshubham/Reanimated-Animations-Examples/assets/93374747/282ccd57-a7bd-428c-af4d-1fb14cb2f7e6)
