@@ -1,8 +1,8 @@
 import React from 'react';
-import Animated3DCarousel from './src/examples/Animated3DCarousel';
+import CreditCardScrollAnimation from './src/examples/CreditCardScrollAnimation';
 
 function App(): JSX.Element {
-  return <Animated3DCarousel />;
+  return <CreditCardScrollAnimation />;
 }
 
 export default App;
