@@ -27,3 +27,9 @@ Inspiration from [Link](https://www.animatereactnative.com/post/react-native-par
 Inspiration from [Link](https://www.animatereactnative.com/post/credit-card-scroll-animation)
 
 ![creditCardScrollAnimation](https://github.com/jadonshubham/Reanimated-Animations-Examples/assets/93374747/282ccd57-a7bd-428c-af4d-1fb14cb2f7e6)
+
+### 4. Dots Ripple Animation
+Inspiration from [Link](https://www.animatereactnative.com/post/dots-ripple-reanimated)
+
+![DotsRipple](https://github.com/jadonshubham/Reanimated-Animations-Examples/assets/93374747/2cae1db7-3222-4148-a8e3-48133a88a4b8)
+
